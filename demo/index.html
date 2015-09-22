@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>porthole</title>
+
+	<link rel="stylesheet" href="demo.css">
+	<link rel="stylesheet" href="//filamentgroup.github.io/demo-head/demohead.css">
+
+	<style>
+		[data-scroll-activate] {
+			height: 200px;
+			background: #eee;
+			transition: background 1s linear;
+			margin-bottom: 10px;
+		}
+		[data-scroll-activate].inviewport {
+			background: green;
+		}
+	</style>
+
+	<script src="../dist/dependencies/jquery.js"></script>
+	<script src="../dist/porthole.js"></script>
+	<script src="../dist/porthole.init.js"></script>
+	<script src="//filamentgroup.github.io/demo-head/loadfont.js"></script>
+	<script>
+		$( function(){
+			$( document ).trigger( "enhance" );
+		});
+	</script>
+</head>
+<body>
+	<div class="demo-header">
+		<div class="company">
+			<img src="http://filamentgroup.com/images/fg-logo-positive-sm-crop.png">
+		</div>
+		<div class="details">
+			<h1 class="description-container">Demo of <span class="repo-name">porthole</span>
+				<span class="description">Activate stuff when it's in the viewport</span>
+			</h1>
+			<ul class="outbound-links">
+				<li><a href="https://github.com/filamentgroup/porthole">Code</a></li>
+				<li><a href="https://github.com/filamentgroup/porthole/issues">Issues</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="docs-main">
+
+		<h1 class="docs">Porthole Demos</h1>
+
+<p class="docs">Elements with a <code>data-scroll-activate</code> attribute will receive a <code>inviewport</code> class when they scroll into the viewport. This allows for subtle animations to begin when elements scroll into view.</p>
+</div>
+
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate></div>
+</div>
+
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate></div>
+</div>
+
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate></div>
+</div>
+
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate></div>
+</div>
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate></div>
+</div>
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate></div>
+</div>
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate></div>
+</div>
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate></div>
+</div>
+
+
+<p class="docs">The following blocks have data-scroll-deactivate attributes as well, which will cause the class to be removed when the element is out of viewport.</p>
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate data-scroll-deactivate></div>
+</div>
+
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate data-scroll-deactivate></div>
+</div>
+
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate data-scroll-deactivate></div>
+</div>
+
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate data-scroll-deactivate></div>
+</div>
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate data-scroll-deactivate></div>
+</div>
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate data-scroll-deactivate></div>
+</div>
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate data-scroll-deactivate></div>
+</div>
+
+<div data-xrayhtml data-title="Sample Scroll Activate">
+	<div data-scroll-activate data-scroll-deactivate></div>
+</div>
+	</div>
+
+</body>
+</html>

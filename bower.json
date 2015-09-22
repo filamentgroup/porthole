@@ -1,0 +1,14 @@
+{
+	"name": "filament-porthole",
+	"version": "0.1.0",
+	"main": [
+		"dist/porthole.js",
+		"dist/porthole-init.js"
+	],
+	"ignore": [
+		"**/.*"
+	],
+	"dependencies": {
+		"jquery": ">=1.11.2"
+	}
+}
