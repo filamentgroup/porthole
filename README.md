@@ -11,9 +11,8 @@ Give an element a `data-scroll-activate` attribute and it'll get a "inviewport" 
 Elements that also have a `data-scroll-deactivate` attribute will lose the class when they leave the viewport, and they'll get a "outviewport" event
 
 
-* [Demo](http://filamentgroup.github.io/porthole/demo/)
-
-## [Tests](http://filamentgroup.github.io/porthole/test/)
+* [Demos and Docs](http://filamentgroup.github.io/porthole/demo/)
+* [Tests](http://filamentgroup.github.io/porthole/test/)
 
 ## Building the Project Locally
 
