@@ -1,15 +1,17 @@
-/*! porthole - v1.0.4 - 2015-09-22
+/*! porthole - v0.1.0 - 2016-05-20
 * https://github.com/filamentgroup/porthole
-* Copyright (c) 2015 Filament Group; Licensed MIT */
+* Copyright (c) 2016 Filament Group; Licensed MIT */
 (function($){
 
 	var queue = [];
 	var listening;
 	var deActivateSelector = "[data-scroll-deactivate]";
+	var toleranceSelector = "data-scroll-activetolerance";
 	var activeClass = "inviewport";
 	var viewportSize;
 	var options = {
-		removeClass: false //remove class when out of viewport? default false
+		removeClass: false, //remove class when out of viewport? default false
+		activeTolerance: 0 // adjust the active window that is considered to be "in the viewport". Positive values make the window larger (good for prefetching images). Negative Values make it smaller (good for cueing animations)
 	};
 
 	// polyfill raf if needed
@@ -43,9 +45,23 @@
 			var isActive = $( this ).is( "." + activeClass );
 			var thisTop = this.getBoundingClientRect().top;
 			var thisBottom = thisTop + this.offsetHeight;
+			var tolerance = 0;
+			var toleranceAttr = $( this ).attr( toleranceSelector );
+			if( toleranceAttr ){
+				var tolVal = parseFloat( toleranceAttr );
+				if( !isNaN( tolVal ) ){
+					tolerance = tolVal;
+				}
+			}
 			var thisOptions = $.extend( options, {
-				removeClass: $( this ).is( deActivateSelector ) || false
+				removeClass: $( this ).is( deActivateSelector ) || false,
+				activeTolerance: tolerance
 			});
+
+			if( thisOptions.activeTolerance !== 0 ){
+				thisTop += thisOptions.activeTolerance;
+			}
+
 			if( thisTop  >= 0 && thisTop <= viewportHeight ||
 				thisTop <= 0 && thisBottom >= viewportHeight ||
 				thisBottom >= 0 && thisBottom  <= viewportHeight ){
