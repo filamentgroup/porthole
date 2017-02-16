@@ -124,9 +124,9 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	// Default task.
-	grunt.registerTask('travis', ['jshint', 'qunit']);
+	grunt.registerTask('travis', ['jshint']);
 	grunt.registerTask('src', ['concat', 'clean:dependencies', 'copy', 'clean:post']);
-	grunt.registerTask('default', ['jshint', 'src', 'qunit', 'bytesize']);
+	grunt.registerTask('default', ['jshint', 'src', 'bytesize']);
 
 	// Deploy
 	grunt.registerTask('deploy', ['default', 'gh-pages']);

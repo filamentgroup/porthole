@@ -84,7 +84,7 @@
 	var listen = function(){
 		raf( checkActivateElems );
 		listening = true;
-		$( window ).bind( "scroll", function(){
+		$( window ).bind( "scroll resize", function(){
 			raf( checkActivateElems );
 		} );
 	};
