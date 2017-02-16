@@ -200,6 +200,7 @@
 
 <p class="docs">Porthole will trigger an <code>inviewport</code> event on elements with a <code>data-scroll-activate</code> attribute when they enter the viewport, and it will trigger an <code>outviewport</code> event when it exits the viewport.</p>
 
+<p class="docs">Once initialized, Porthole automatically checks for elements in the viewport on scroll and resize. The porthole.init.js file initializes porthole when the "enhance" event occurs on the document. We typically recommend triggering this "enhance" event on domready. You can also cause porthole to check which elements are in view by triggering a "porthole" event on the window.</p>
 
 </div>
 
