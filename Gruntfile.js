@@ -129,6 +129,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['jshint', 'src', 'bytesize']);
 
 	// Deploy
-	grunt.registerTask('deploy', ['default', 'gh-pages']);
+	grunt.registerTask('stage', ['default']);
 
 };

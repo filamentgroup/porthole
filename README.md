@@ -6,13 +6,8 @@
 
 ### Using porthole
 
-
-Give an element a `data-scroll-activate` attribute and it'll get a "inviewport" class when in the viewport, as well as an "inviewport" event triggered on it.
-Elements that also have a `data-scroll-deactivate` attribute will lose the class when they leave the viewport, and they'll get a "outviewport" event
-
-
-* [Demos and Docs](http://filamentgroup.github.io/porthole/demo/)
-* [Tests](http://filamentgroup.github.io/porthole/test/)
+* [Demos and Docs](master.origin.porthole.fgview.com/demo)
+* [Tests](master.origin.porthole.fgview.com/test)
 
 ## Building the Project Locally
 
