@@ -1,4 +1,4 @@
-/*! porthole - v0.2.0 - 2017-02-16
+/*! porthole - v0.3.0 - 2017-02-16
 * https://github.com/filamentgroup/porthole
 * Copyright (c) 2017 Filament Group; Licensed MIT */
 ;(function( $ ) {
