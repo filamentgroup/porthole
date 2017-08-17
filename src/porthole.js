@@ -44,6 +44,7 @@
 	var checkActivateElems = function(){
 		var viewportHeight = getViewportSize().height;
 		$( queue ).each(function(){
+			var beforeContent = window.getComputedStyle( this, ":before" ).content;
 			var isActive = $( this ).is( "." + activeClass );
 			var thisTop = this.getBoundingClientRect().top;
 			var thisBottom = thisTop + this.offsetHeight;
@@ -63,10 +64,11 @@
 			if( thisOptions.activeTolerance !== 0 ){
 				thisTop += thisOptions.activeTolerance;
 			}
-
-			if( thisTop  >= 0 && thisTop <= viewportHeight ||
+			if( beforeContent !== "hidden" &&
+			( thisTop  >= 0 && thisTop <= viewportHeight ||
 				thisTop <= 0 && thisBottom >= viewportHeight ||
-				thisBottom >= 0 && thisBottom  <= viewportHeight ){
+				thisBottom >= 0 && thisBottom  <= viewportHeight )
+			 ){
 				if( !isActive ){
 					$( this )
 						.addClass( activeClass )
