@@ -44,7 +44,7 @@
 	var checkActivateElems = function(){
 		var viewportHeight = getViewportSize().height;
 		$( queue ).each(function(){
-			var beforeContent = window.getComputedStyle( this, ":before" ).content;
+			var beforeContent = window.getComputedStyle( this, ":before" ).getPropertyValue( "content" );
 			var isActive = $( this ).is( "." + activeClass );
 			var thisTop = this.getBoundingClientRect().top;
 			var thisBottom = thisTop + this.offsetHeight;
@@ -64,10 +64,13 @@
 			if( thisOptions.activeTolerance !== 0 ){
 				thisTop += thisOptions.activeTolerance;
 			}
-			if( beforeContent !== "hidden" &&
-			( thisTop  >= 0 && thisTop <= viewportHeight ||
+			if(
+				beforeContent.indexOf( "hidden" ) === -1 &&
+				(
+				thisTop  >= 0 && thisTop <= viewportHeight ||
 				thisTop <= 0 && thisBottom >= viewportHeight ||
-				thisBottom >= 0 && thisBottom  <= viewportHeight )
+				thisBottom >= 0 && thisBottom  <= viewportHeight
+				)
 			 ){
 				if( !isActive ){
 					$( this )
@@ -86,7 +89,7 @@
 	var listen = function(){
 		raf( checkActivateElems );
 		listening = true;
-		$( window ).bind( "scroll resize porthole", function(){
+		$( window ).bind( "scroll resize porthole", function(e){
 			raf( checkActivateElems );
 		} );
 	};
