@@ -89,7 +89,7 @@
 	var listen = function(){
 		raf( checkActivateElems );
 		listening = true;
-		$( window ).bind( "scroll resize porthole", function(e){
+		$( window ).bind( "scroll resize porthole", function(){
 			raf( checkActivateElems );
 		} );
 	};
