@@ -1,4 +1,4 @@
-/*! porthole - v0.3.0 - 2017-02-16
+/*! porthole - v0.4.1 - 2017-08-18
 * https://github.com/filamentgroup/porthole
 * Copyright (c) 2017 Filament Group; Licensed MIT */
 (function($){
@@ -42,6 +42,7 @@
 	var checkActivateElems = function(){
 		var viewportHeight = getViewportSize().height;
 		$( queue ).each(function(){
+			var beforeContent = window.getComputedStyle( this, ":before" ).getPropertyValue( "content" );
 			var isActive = $( this ).is( "." + activeClass );
 			var thisTop = this.getBoundingClientRect().top;
 			var thisBottom = thisTop + this.offsetHeight;
@@ -61,10 +62,12 @@
 			if( thisOptions.activeTolerance !== 0 ){
 				thisTop += thisOptions.activeTolerance;
 			}
-
-			if( thisTop  >= 0 && thisTop <= viewportHeight ||
-				thisTop <= 0 && thisBottom >= viewportHeight ||
-				thisBottom >= 0 && thisBottom  <= viewportHeight ){
+			if(
+				beforeContent.indexOf( "hidden" ) === -1 &&
+				(thisTop  >= 0 && thisTop <= viewportHeight) ||
+				(thisTop <= 0 && thisBottom >= viewportHeight) ||
+				(thisBottom >= 0 && thisBottom <= viewportHeight)
+			){
 				if( !isActive ){
 					$( this )
 						.addClass( activeClass )
