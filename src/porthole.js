@@ -66,11 +66,9 @@
 			}
 			if(
 				beforeContent.indexOf( "hidden" ) === -1 &&
-				(
-				thisTop  >= 0 && thisTop <= viewportHeight ||
-				thisTop <= 0 && thisBottom >= viewportHeight ||
-				thisBottom >= 0 && thisBottom  <= viewportHeight
-				)
+				( thisTop  >= 0 && thisTop <= viewportHeight ) ||
+				( thisTop <= 0 && thisBottom >= viewportHeight ) ||
+				( thisBottom >= 0 && thisBottom  <= viewportHeight )
 			 ){
 				if( !isActive ){
 					$( this )
