@@ -1,4 +1,4 @@
-/*! porthole - v0.4.1 - 2017-08-18
+/*! porthole - v0.5.0 - 2017-10-17
 * https://github.com/filamentgroup/porthole
 * Copyright (c) 2017 Filament Group; Licensed MIT */
 (function($){
@@ -64,9 +64,9 @@
 			}
 			if(
 				beforeContent.indexOf( "hidden" ) === -1 &&
-				(thisTop  >= 0 && thisTop <= viewportHeight) ||
+				((thisTop  >= 0 && thisTop <= viewportHeight) ||
 				(thisTop <= 0 && thisBottom >= viewportHeight) ||
-				(thisBottom >= 0 && thisBottom <= viewportHeight)
+				(thisBottom >= 0 && thisBottom <= viewportHeight))
 			){
 				if( !isActive ){
 					$( this )
