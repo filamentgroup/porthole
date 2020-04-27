@@ -2,7 +2,7 @@
   "name": "porthole",
   "title": "porthole",
   "description": "Activate an element when it is in the viewport.",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "homepage": "https://github.com/filamentgroup/porthole",
   "author": {
     "name": "Scott Jehl",
