@@ -6,8 +6,8 @@
 
 ### Using porthole
 
-* [Demos and Docs](https://master-origin-porthole.fgview.com/demo/)
-* [Tests](https://master-origin-porthole.fgview.com/test/)
+* [Demos and Docs](http://filamentgroup.github.io/porthole/demo/)
+* [Tests](http://filamentgroup.github.io/porthole/test/)
 
 ## Building the Project Locally
 
